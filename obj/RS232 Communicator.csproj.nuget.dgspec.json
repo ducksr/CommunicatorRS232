@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rober\\OneDrive\\DEVs\\Email-Tester-SMTP\\RS232 Communicator\\RS232 Communicator.csproj": {}
+    "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\RS232 Communicator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rober\\OneDrive\\DEVs\\Email-Tester-SMTP\\RS232 Communicator\\RS232 Communicator.csproj": {
+    "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\RS232 Communicator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rober\\OneDrive\\DEVs\\Email-Tester-SMTP\\RS232 Communicator\\RS232 Communicator.csproj",
+        "projectUniqueName": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\RS232 Communicator.csproj",
         "projectName": "RS232 Communicator",
-        "projectPath": "C:\\Users\\Rober\\OneDrive\\DEVs\\Email-Tester-SMTP\\RS232 Communicator\\RS232 Communicator.csproj",
+        "projectPath": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\RS232 Communicator.csproj",
         "packagesPath": "C:\\Users\\Rober\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rober\\OneDrive\\DEVs\\Email-Tester-SMTP\\RS232 Communicator\\obj\\",
+        "outputPath": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

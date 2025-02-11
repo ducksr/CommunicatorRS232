@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             txtWritter = new TextBox();
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
@@ -42,25 +43,36 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             infoToolStripMenuItem = new ToolStripMenuItem();
             contactToolStripMenuItem = new ToolStripMenuItem();
+            tsslblRun = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            statusStrip1 = new StatusStrip();
+            tsslblVersion = new ToolStripStatusLabel();
+            tsslblVersionNumber = new ToolStripStatusLabel();
+            toolStripStatusLabel3 = new ToolStripStatusLabel();
+            tsslblStatusTitle = new ToolStripStatusLabel();
+            tsslblStatusConnection = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // txtWritter
             // 
-            txtWritter.Location = new Point(12, 31);
+            txtWritter.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtWritter.Location = new Point(12, 41);
             txtWritter.Multiline = true;
             txtWritter.Name = "txtWritter";
-            txtWritter.Size = new Size(1152, 460);
+            txtWritter.Size = new Size(747, 502);
             txtWritter.TabIndex = 1;
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, settingsToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, settingsToolStripMenuItem, helpToolStripMenuItem, tsslblRun, toolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Margin = new Padding(0, 0, 10, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            menuStrip1.Size = new Size(1176, 28);
+            menuStrip1.Size = new Size(771, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -107,19 +119,19 @@
             // openToolStripMenuItem1
             // 
             openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            openToolStripMenuItem1.Size = new Size(224, 26);
+            openToolStripMenuItem1.Size = new Size(125, 26);
             openToolStripMenuItem1.Text = "Edit";
             // 
             // loadToolStripMenuItem
             // 
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            loadToolStripMenuItem.Size = new Size(224, 26);
+            loadToolStripMenuItem.Size = new Size(125, 26);
             loadToolStripMenuItem.Text = "Load";
             // 
             // exportToolStripMenuItem
             // 
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(224, 26);
+            exportToolStripMenuItem.Size = new Size(125, 26);
             exportToolStripMenuItem.Text = "Save";
             // 
             // helpToolStripMenuItem
@@ -132,28 +144,94 @@
             // infoToolStripMenuItem
             // 
             infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            infoToolStripMenuItem.Size = new Size(224, 26);
+            infoToolStripMenuItem.Size = new Size(147, 26);
             infoToolStripMenuItem.Text = "Info";
             // 
             // contactToolStripMenuItem
             // 
             contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            contactToolStripMenuItem.Size = new Size(224, 26);
+            contactToolStripMenuItem.Size = new Size(147, 26);
             contactToolStripMenuItem.Text = "Contact ";
+            // 
+            // tsslblRun
+            // 
+            tsslblRun.Image = (Image)resources.GetObject("tsslblRun.Image");
+            tsslblRun.Margin = new Padding(0, 0, 10, 0);
+            tsslblRun.Name = "tsslblRun";
+            tsslblRun.ShortcutKeys = Keys.F5;
+            tsslblRun.Size = new Size(34, 24);
+            tsslblRun.Tag = "Run";
+            tsslblRun.MouseHover += toolStripMenuItem1_MouseHover;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(27, 24);
+            toolStripMenuItem1.Text = " ";
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.ImageScalingSize = new Size(20, 20);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { tsslblVersion, tsslblVersionNumber, toolStripStatusLabel3, tsslblStatusTitle, tsslblStatusConnection });
+            statusStrip1.Location = new Point(0, 559);
+            statusStrip1.Margin = new Padding(0, 0, 20, 0);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.RenderMode = ToolStripRenderMode.Professional;
+            statusStrip1.Size = new Size(771, 26);
+            statusStrip1.TabIndex = 3;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // tsslblVersion
+            // 
+            tsslblVersion.Margin = new Padding(0, 4, 20, 2);
+            tsslblVersion.Name = "tsslblVersion";
+            tsslblVersion.Size = new Size(60, 20);
+            tsslblVersion.Text = "Version:";
+            // 
+            // tsslblVersionNumber
+            // 
+            tsslblVersionNumber.Margin = new Padding(0, 4, 20, 2);
+            tsslblVersionNumber.Name = "tsslblVersionNumber";
+            tsslblVersionNumber.Size = new Size(17, 20);
+            tsslblVersionNumber.Text = "1";
+            // 
+            // toolStripStatusLabel3
+            // 
+            toolStripStatusLabel3.Margin = new Padding(0, 4, 20, 2);
+            toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            toolStripStatusLabel3.Size = new Size(0, 20);
+            // 
+            // tsslblStatusTitle
+            // 
+            tsslblStatusTitle.Margin = new Padding(0, 4, 20, 2);
+            tsslblStatusTitle.Name = "tsslblStatusTitle";
+            tsslblStatusTitle.Size = new Size(131, 20);
+            tsslblStatusTitle.Text = "Connection Status:";
+            // 
+            // tsslblStatusConnection
+            // 
+            tsslblStatusConnection.Margin = new Padding(0, 4, 20, 2);
+            tsslblStatusConnection.Name = "tsslblStatusConnection";
+            tsslblStatusConnection.Size = new Size(80, 20);
+            tsslblStatusConnection.Text = "....Wating....";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1176, 503);
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(771, 585);
+            Controls.Add(statusStrip1);
             Controls.Add(txtWritter);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            MinimumSize = new Size(789, 632);
             Name = "Form1";
             Text = "Form1";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -173,5 +251,13 @@
         private ToolStripMenuItem contactToolStripMenuItem;
         private ToolStripMenuItem loadToolStripMenuItem;
         private ToolStripMenuItem exportToolStripMenuItem;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel tsslblVersion;
+        private ToolStripStatusLabel tsslblVersionNumber;
+        private ToolStripStatusLabel toolStripStatusLabel3;
+        private ToolStripStatusLabel tsslblStatusTitle;
+        private ToolStripStatusLabel tsslblStatusConnection;
+        private ToolStripMenuItem tsslblRun;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 }

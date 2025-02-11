@@ -16,3 +16,21 @@ C:\Users\Rober\OneDrive\DEVs\Email-Tester-SMTP\RS232 Communicator\obj\Debug\net8
 C:\Users\Rober\OneDrive\DEVs\Email-Tester-SMTP\RS232 Communicator\obj\Debug\net8.0-windows\RS232 Communicator.genruntimeconfig.cache
 C:\Users\Rober\OneDrive\DEVs\Email-Tester-SMTP\RS232 Communicator\obj\Debug\net8.0-windows\ref\RS232 Communicator.dll
 C:\Users\Rober\OneDrive\DEVs\Email-Tester-SMTP\RS232 Communicator\obj\Debug\net8.0-windows\RS232_Communicator.Properties.Resources.resources
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232_Communicator.Form1.resources
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232_Communicator.Properties.Resources.resources
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.csproj.GenerateResource.cache
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.AssemblyInfoInputs.cache
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.AssemblyInfo.cs
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.csproj.CoreCompileInputs.cache
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.sourcelink.json
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.dll
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\refint\RS232 Communicator.dll
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.pdb
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\bin\Debug\net8.0-windows\RS232 Communicator.exe
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\bin\Debug\net8.0-windows\RS232 Communicator.deps.json
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\bin\Debug\net8.0-windows\RS232 Communicator.runtimeconfig.json
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\bin\Debug\net8.0-windows\RS232 Communicator.dll
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\bin\Debug\net8.0-windows\RS232 Communicator.pdb
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.genruntimeconfig.cache
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\ref\RS232 Communicator.dll

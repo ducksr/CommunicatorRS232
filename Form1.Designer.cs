@@ -165,9 +165,9 @@
             // 
             // toolStripMenuItem1
             // 
+            toolStripMenuItem1.Image = (Image)resources.GetObject("toolStripMenuItem1.Image");
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(27, 24);
-            toolStripMenuItem1.Text = " ";
+            toolStripMenuItem1.Size = new Size(34, 24);
             // 
             // statusStrip1
             // 

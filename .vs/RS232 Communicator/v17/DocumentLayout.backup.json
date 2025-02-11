@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|c:\\users\\rober\\onedrive\\devs\\communicatorrs232\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|c:\\users\\rober\\onedrive\\devs\\communicatorrs232\\serialportsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|solutionrelative:serialportsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|c:\\users\\rober\\onedrive\\devs\\communicatorrs232\\serialportsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|solutionrelative:serialportsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|c:\\users\\rober\\onedrive\\devs\\communicatorrs232\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|c:\\users\\rober\\onedrive\\devs\\communicatorrs232\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{253FB9EE-B41D-457D-8E50-078BC8154A75}|RS232 Communicator.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +30,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAADwv2IAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAArwDgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-11T08:08:20.409Z",
               "EditorCaption": ""
@@ -59,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SerialPortSettings.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\SerialPortSettings.cs",
               "RelativeDocumentMoniker": "SerialPortSettings.cs",
@@ -68,40 +64,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-11T07:45:33.124Z",
               "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "045baae8-2e84-4a55-9607-aa1129274f52",
-        "Display": 1,
-        "X": -276,
-        "Y": 812,
-        "Width": 1361,
-        "Height": 924,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SerialPortSettings.cs",
-              "DocumentMoniker": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\SerialPortSettings.cs",
-              "RelativeDocumentMoniker": "SerialPortSettings.cs",
-              "ToolTip": "C:\\Users\\Rober\\OneDrive\\DEVs\\CommunicatorRS232\\SerialPortSettings.cs",
-              "RelativeToolTip": "SerialPortSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T07:43:39.641Z",
-              "EditorCaption": ""
             }
           ]
         }

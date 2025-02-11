@@ -52,18 +52,25 @@ namespace RS232_Communicator
 
         private void tsslblRun_Click(object sender, EventArgs e)
         {
-            // Configurar puerto
-            serialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
-            serialPort.Open();
+            
 
+            try {
+                // Configurar puerto
+                serialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
+                serialPort.Open();
 
-            foreach (string linea in txtWritter.Lines)
-            {
-                serialPort.WriteLine(linea);
+                foreach (string linea in txtWritter.Lines)
+                {
+                    serialPort.WriteLine(linea);
+                }
+
+                serialPort.Close();
+
             }
-
-            serialPort.Close();
-
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

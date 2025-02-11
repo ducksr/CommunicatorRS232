@@ -6,3 +6,29 @@ obj/Debug/net8.0-windows/TempPE/Properties.Resources.Designer.cs.dll
 .vs/RS232 Communicator/FileContentIndex/9f35ec49-f923-4c5d-85ec-82872dca00a4.vsidx
 .vs/RS232 Communicator/FileContentIndex/33cd507f-0c4e-4689-b441-54e985a132c8.vsidx
 .vs/RS232 Communicator/FileContentIndex/d264e005-7530-4cd3-9f80-c88e552d027a.vsidx
+.vs/RS232 Communicator/FileContentIndex/0056dd27-757a-46de-9df0-554e8c76e467.vsidx
+.vs/RS232 Communicator/FileContentIndex/278bcec9-c726-4537-905d-3d5e80fb5457.vsidx
+.vs/RS232 Communicator/FileContentIndex/35c18578-9dcc-4c20-82d6-40aaee02e6d4.vsidx
+.vs/RS232 Communicator/FileContentIndex/7c1b5016-e566-452f-bf11-73ec06611bd5.vsidx
+.vs/RS232 Communicator/FileContentIndex/9f94934e-d27f-43f2-b133-e406c94b2c9c.vsidx
+bin/Debug/net8.0-windows/System.IO.Ports.dll
+bin/Debug/net8.0-windows/runtimes/android-arm/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/android-arm64/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/android-x64/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/android-x86/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/linux-arm/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/linux-bionic-arm64/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/linux-bionic-x64/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/linux-musl-arm/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/linux-musl-arm64/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/linux-musl-x64/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/linux-x64/native/libSystem.IO.Ports.Native.so
+bin/Debug/net8.0-windows/runtimes/maccatalyst-arm64/native/libSystem.IO.Ports.Native.dylib
+bin/Debug/net8.0-windows/runtimes/maccatalyst-x64/native/libSystem.IO.Ports.Native.dylib
+bin/Debug/net8.0-windows/runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib
+bin/Debug/net8.0-windows/runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib
+bin/Debug/net8.0-windows/runtimes/unix/lib/net8.0/System.IO.Ports.dll
+bin/Debug/net8.0-windows/runtimes/win/lib/net8.0/System.IO.Ports.dll
+obj/Debug/net8.0-windows/RS232 Co.355C1D4E.Up2Date
+obj/Debug/net8.0-windows/RS232_Communicator.SerialPortSettings.resources

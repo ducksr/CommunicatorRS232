@@ -410,6 +410,8 @@
             Controls.Add(groupBox1);
             Controls.Add(gbBundRate);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            MaximumSize = new Size(502, 531);
+            MinimumSize = new Size(502, 531);
             Name = "SerialPortSettings";
             Text = "Serial Port Settings";
             gbBundRate.ResumeLayout(false);

@@ -15,6 +15,14 @@ namespace RS232_Communicator
         public SerialPortSettings()
         {
             InitializeComponent();
+
+            lsCOMPortSelect.SelectedIndex = 0;
+
+        }
+
+        private void btnCloseSettings_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -86,27 +86,27 @@
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(224, 26);
+            openToolStripMenuItem.Size = new Size(155, 26);
             openToolStripMenuItem.Text = "Open File";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(224, 26);
+            saveToolStripMenuItem.Size = new Size(155, 26);
             saveToolStripMenuItem.Text = "Save";
             // 
             // saveAsToolStripMenuItem
             // 
             saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            saveAsToolStripMenuItem.Size = new Size(224, 26);
+            saveAsToolStripMenuItem.Size = new Size(155, 26);
             saveAsToolStripMenuItem.Text = "Save As";
             saveAsToolStripMenuItem.Click += saveAsToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(224, 26);
+            exitToolStripMenuItem.Size = new Size(155, 26);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -123,6 +123,7 @@
             openToolStripMenuItem1.Name = "openToolStripMenuItem1";
             openToolStripMenuItem1.Size = new Size(224, 26);
             openToolStripMenuItem1.Text = "Edit";
+            openToolStripMenuItem1.Click += openToolStripMenuItem1_Click;
             // 
             // loadToolStripMenuItem
             // 
@@ -147,13 +148,13 @@
             // infoToolStripMenuItem
             // 
             infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            infoToolStripMenuItem.Size = new Size(224, 26);
+            infoToolStripMenuItem.Size = new Size(147, 26);
             infoToolStripMenuItem.Text = "Info";
             // 
             // contactToolStripMenuItem
             // 
             contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            contactToolStripMenuItem.Size = new Size(224, 26);
+            contactToolStripMenuItem.Size = new Size(147, 26);
             contactToolStripMenuItem.Text = "Contact ";
             // 
             // msbtnRun

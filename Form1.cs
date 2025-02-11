@@ -48,7 +48,7 @@ namespace RS232_Communicator
             this.Close();
         }
 
-        
+
 
         private void tsslblRun_Click(object sender, EventArgs e)
         {
@@ -57,7 +57,8 @@ namespace RS232_Communicator
             serialPort.Open();
 
 
-            foreach (string linea in txtWritter.Lines) { 
+            foreach (string linea in txtWritter.Lines)
+            {
                 serialPort.WriteLine(linea);
             }
 
@@ -90,6 +91,12 @@ namespace RS232_Communicator
                     MessageBox.Show("Archivo guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void openToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SerialPortSettings serialPortSettings = new SerialPortSettings();
+            serialPortSettings.Show();
         }
     }
 }

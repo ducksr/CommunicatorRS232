@@ -1,17 +1,14 @@
-using System.Reflection.Emit;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+using System.IO.Ports;
+
 
 namespace RS232_Communicator
 {
     public partial class Form1 : Form
     {
-        private Rectangle originalFormRect;
-        private Rectangle originalTxtWritterRect;
+        private string fileNameLocation = "";
 
-        private float originalTxtWritterSize;
-
-        private float fontScale = 1f;
+        private SerialPort serialPort;
 
 
         public Form1()
@@ -21,14 +18,28 @@ namespace RS232_Communicator
             txtWritter.ScrollBars = ScrollBars.Vertical;
             txtWritter.WordWrap = true;
 
-            originalFormRect = new Rectangle(this.Location, this.Size);
-            originalTxtWritterRect = new Rectangle(txtWritter.Location, txtWritter.Size);
-            originalTxtWritterSize = txtWritter.Font.Size;
+
+            msbtnRun.ToolTipText = "Run";
+
+            this.Name = Application.ProductName;
 
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+
+            {
+
+                string filePath = dialog.FileName;
+
+                string fileContent = File.ReadAllText(filePath);
+
+                txtWritter.Text = fileContent; // Assuming "" is your text box
+
+            }
 
         }
 
@@ -37,9 +48,48 @@ namespace RS232_Communicator
             this.Close();
         }
 
-        private void toolStripMenuItem1_MouseHover(object sender, EventArgs e)
+        
+
+        private void tsslblRun_Click(object sender, EventArgs e)
         {
-            toolStripStatusLabel3.ToolTipText = "Run";
+            // Configurar puerto
+            serialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
+            serialPort.Open();
+
+
+            foreach (string linea in txtWritter.Lines) { 
+                serialPort.WriteLine(linea);
+            }
+
+            serialPort.Close();
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Run Test connection");
+
+            tsslblStatusConnection.Text = "Connected!";
+            tsslblStatusConnection.BackColor = Color.GreenYellow;
+
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                string texto = txtWritter.Text;
+
+                saveFileDialog.Filter = "Archivos MATLAB (*.m)|*.m|Todos los archivos (*.*)|*.*";
+                saveFileDialog.Title = "Guardar como";
+                saveFileDialog.DefaultExt = "m";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(saveFileDialog.FileName, texto);
+                    MessageBox.Show("Archivo guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

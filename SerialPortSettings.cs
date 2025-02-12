@@ -15,7 +15,7 @@ using System.Xml.Linq;
 
 namespace RS232_Communicator
 {
-    public partial class SerialPortSettings : Form1
+    public partial class SerialPortSettings : Form
     {
 
         private GlobalsSettings _settings = new GlobalsSettings();

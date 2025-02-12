@@ -415,6 +415,14 @@
             MinimumSize = new Size(502, 531);
             Name = "SerialPortSettings";
             Text = "Serial Port Settings";
+            Controls.SetChildIndex(gbBundRate, 0);
+            Controls.SetChildIndex(gbDataBits, 0);
+            Controls.SetChildIndex(gbStopBits, 0);
+            Controls.SetChildIndex(gbParity, 0);
+            Controls.SetChildIndex(gbFlowControl, 0);
+            Controls.SetChildIndex(lsCOMPortSelect, 0);
+            Controls.SetChildIndex(btnSaveSettings, 0);
+            Controls.SetChildIndex(btnCloseSettings, 0);
             gbBundRate.ResumeLayout(false);
             gbBundRate.PerformLayout();
             gbDataBits.ResumeLayout(false);
@@ -426,6 +434,7 @@
             gbFlowControl.ResumeLayout(false);
             gbFlowControl.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -72,11 +72,12 @@ namespace RS232_Communicator
         private void tsslblRun_Click(object sender, EventArgs e)
         {
 
+            GlobalsSettings _settings = new GlobalsSettings();
 
             try
             {
                 // Configurar puerto
-                serialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
+                serialPort = new SerialPort("COM"+_settings.SerialPort, int.Parse(_settings.BaundRate), Parity.None, int.Parse(_settings.DataBits), StopBits.One);
                 serialPort.Open();
 
                 foreach (string linea in txtWritter.Lines)

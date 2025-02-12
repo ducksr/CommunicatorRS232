@@ -13,12 +13,14 @@ namespace RS232_Communicator.Utilities
 
     internal class GlobalsSettings
     {
-        readonly NameValueCollection _configSettings =
+        readonly NameValueCollection? _configSettings =
            ConfigurationManager.GetSection("appSettings") as NameValueCollection;
 
 
+
+
         // Config System
-        public string SerialPort => _configSettings["SerialPort"].Trim() ?? "5";
+        public  string SerialPort => _configSettings["SerialPort"].Trim() ?? "5";
         public string BaundRate => _configSettings["BaundRate"].Trim() ?? "9600";
         public string DataBits => _configSettings["DataBits"].Trim() ?? "7";
         public string StopBits => _configSettings["StopBits"].Trim() ?? "2";
@@ -36,13 +38,13 @@ namespace RS232_Communicator.Utilities
             XNamespace ns = config.Root?.GetDefaultNamespace() ?? XNamespace.None;
 
             // Buscar el nodo <appSettings>
-            XElement appSettings = config.Descendants(ns + "appSettings").FirstOrDefault();
+            XElement? appSettings = config.Descendants(ns + "appSettings").FirstOrDefault();
 
             if (appSettings != null)
             {
                 // Buscar la clave "BaudRate"
-                XElement value = appSettings.Elements(ns + "add")
-                    .FirstOrDefault(e => (string)e.Attribute("key") == configname);
+                XElement? value = appSettings.Elements(ns + "add")
+                    .FirstOrDefault(e => (string?)e.Attribute("key") == configname);
 
                 if (value != null)
                 {

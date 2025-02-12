@@ -1,7 +1,9 @@
 
 using RS232_Communicator.Utilities;
+using System.Diagnostics.CodeAnalysis;
 using System.IO.Ports;
 using System.Net.Http;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -11,7 +13,7 @@ namespace RS232_Communicator
     public partial class Form1 : Form
     {
 
-        private SerialPort serialPort;
+        private SerialPort? serialPort;
 
         // Handles UI thread exceptions
         private static void GlobalThreadExceptionHandler(object sender, ThreadExceptionEventArgs e)
@@ -76,8 +78,61 @@ namespace RS232_Communicator
 
             try
             {
+                Parity parity = new Parity();
+                StopBits stopBits = new StopBits();
+                Handshake handshake = new Handshake();
+
+                switch (_settings.Parity)
+                {
+                    case "None":
+                        parity = Parity.None;
+                        break;
+                    case "Odd":
+                        parity = Parity.Odd;
+                        break;
+                    case "Even":
+                        parity = Parity.Even;
+                        break;
+                }
+
+                switch (_settings.StopBits)
+                {
+                    case "1":
+                        stopBits = StopBits.One;
+                        break;
+                    case "2":
+                        stopBits = StopBits.Two;
+                        break;
+                }
+
+                switch (_settings.FlowControl) { 
+                    case "None":
+                        handshake = Handshake.None;
+                        break;
+                    case "Xon/Xoff":
+                        handshake = Handshake.XOnXOff;
+                        break;
+                    case "RTS":
+                        handshake = Handshake.RequestToSend;
+                        break;
+                    case "Xon/RTS":
+                        handshake = Handshake.RequestToSendXOnXOff;
+                        break;
+                }
+
+
+
+
                 // Configurar puerto
-                serialPort = new SerialPort("COM"+_settings.SerialPort, int.Parse(_settings.BaundRate), Parity.None, int.Parse(_settings.DataBits), StopBits.One);
+                serialPort = new SerialPort {
+                    PortName = "COM" + _settings.SerialPort
+                    ,BaudRate = int.Parse(_settings.BaundRate)
+                    ,Parity = parity
+                    ,DataBits = int.Parse(_settings.DataBits)
+                    ,StopBits = stopBits
+                    ,Handshake = handshake
+                };
+
                 serialPort.Open();
 
                 foreach (string linea in txtWritter.Lines)
@@ -97,10 +152,88 @@ namespace RS232_Communicator
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Run Test connection");
 
-            tsslblStatusConnection.Text = "Connected!";
-            tsslblStatusConnection.BackColor = Color.GreenYellow;
+            GlobalsSettings _settings = new GlobalsSettings();
+
+            try
+            {
+                Parity parity = new Parity();
+                StopBits stopBits = new StopBits();
+                Handshake handshake = new Handshake();
+
+                switch (_settings.Parity)
+                {
+                    case "None":
+                        parity = Parity.None;
+                        break;
+                    case "Odd":
+                        parity = Parity.Odd;
+                        break;
+                    case "Even":
+                        parity = Parity.Even;
+                        break;
+                }
+
+                switch (_settings.StopBits)
+                {
+                    case "1":
+                        stopBits = StopBits.One;
+                        break;
+                    case "2":
+                        stopBits = StopBits.Two;
+                        break;
+                }
+
+                switch (_settings.FlowControl)
+                {
+                    case "None":
+                        handshake = Handshake.None;
+                        break;
+                    case "Xon/Xoff":
+                        handshake = Handshake.XOnXOff;
+                        break;
+                    case "RTS":
+                        handshake = Handshake.RequestToSend;
+                        break;
+                    case "Xon/RTS":
+                        handshake = Handshake.RequestToSendXOnXOff;
+                        break;
+                }
+
+
+                // Configurar puerto
+                serialPort = new SerialPort
+                {
+                    PortName = "COM" + _settings.SerialPort
+                    ,
+                    BaudRate = int.Parse(_settings.BaundRate)
+                    ,
+                    Parity = parity
+                    ,
+                    DataBits = int.Parse(_settings.DataBits)
+                    ,
+                    StopBits = stopBits
+                    ,
+                    Handshake = handshake
+                };
+
+                serialPort.Open();
+
+                serialPort.Close();
+
+                tsslblStatusConnection.Enabled = true;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                tsslblStatusConnection.Enabled = true;
+                tsslblStatusConnection.Text = "Fail";
+                tsslblStatusConnection.BackColor = Color.Red;
+
+            }
 
         }
 
@@ -141,21 +274,22 @@ namespace RS232_Communicator
             {
                 string filePath = dialog.FileName;
 
-                XDocument config = XDocument.Load(filePath);
+                XDocument? config = XDocument.Load(filePath);
 
                 // Verificar si hay un namespace (xmlns)
-                XNamespace ns = config.Root?.GetDefaultNamespace() ?? XNamespace.None;
+                XNamespace? ns = config.Root?.GetDefaultNamespace() ?? XNamespace.None;
 
                 // Buscar el nodo <appSettings>
-                XElement appSettings = config.Descendants(ns + "appSettings").FirstOrDefault();
+                XElement? appSettings = config.Descendants(ns + "appSettings").FirstOrDefault();
 
                 if (appSettings != null) {
                     // Buscar la clave "BaudRate"
 
-                    foreach (XElement val in appSettings.Elements(ns + "add")) {
+                    foreach (XElement? val in appSettings.Elements(ns + "add")) {
 
-                        _settings.SaveConfig(val.FirstAttribute.Value,val.LastAttribute.Value);
-
+                        if (val != null){
+                            _settings.SaveConfig(val.FirstAttribute.Value, val.LastAttribute.Value);
+                        }
                     }
 
                     /*

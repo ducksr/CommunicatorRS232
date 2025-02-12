@@ -30,7 +30,7 @@ namespace RS232_Communicator
         // Handles non-UI thread exceptions
         private static void GlobalUnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs e)
         {
-            Exception ex = e.ExceptionObject as Exception;
+            Exception? ex = e.ExceptionObject as Exception;
             if (ex != null)
             {
                 MessageBox.Show($"A critical error occurred:\n{ex.Message}",

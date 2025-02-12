@@ -56,3 +56,4 @@ C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\bin\Debug\net8.0-windows\runtimes
 C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Communicator.csproj.AssemblyReference.cache
 C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232_Communicator.SerialPortSettings.resources
 C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\obj\Debug\net8.0-windows\RS232 Co.355C1D4E.Up2Date
+C:\Users\Rober\OneDrive\DEVs\CommunicatorRS232\bin\Debug\net8.0-windows\RS232 Communicator.dll.config

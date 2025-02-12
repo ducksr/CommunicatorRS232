@@ -1,27 +1,46 @@
 
+using RS232_Communicator.Utilities;
 using System.IO.Ports;
+using System.Net.Http;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
 
 namespace RS232_Communicator
 {
     public partial class Form1 : Form
     {
-        private string fileNameLocation = "";
 
         private SerialPort serialPort;
 
+        // Handles UI thread exceptions
+        private static void GlobalThreadExceptionHandler(object sender, ThreadExceptionEventArgs e)
+        {
+            MessageBox.Show($"An unexpected error occurred:\n{e.Exception.Message}",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        // Handles non-UI thread exceptions
+        private static void GlobalUnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs e)
+        {
+            Exception? ex = e.ExceptionObject as Exception;
+            if (ex != null)
+            {
+                MessageBox.Show($"A critical error occurred:\n{ex.Message}",
+                                "Critical Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         public Form1()
         {
             InitializeComponent();
 
+            Application.ThreadException += new ThreadExceptionEventHandler(GlobalThreadExceptionHandler);
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(GlobalUnhandledExceptionHandler);
+
+
             txtWritter.ScrollBars = ScrollBars.Vertical;
             txtWritter.WordWrap = true;
-
-
-            msbtnRun.ToolTipText = "Run";
-
-            this.Name = Application.ProductName;
 
         }
 
@@ -52,9 +71,10 @@ namespace RS232_Communicator
 
         private void tsslblRun_Click(object sender, EventArgs e)
         {
-            
 
-            try {
+
+            try
+            {
                 // Configurar puerto
                 serialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
                 serialPort.Open();
@@ -67,10 +87,11 @@ namespace RS232_Communicator
                 serialPort.Close();
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -104,6 +125,69 @@ namespace RS232_Communicator
         {
             SerialPortSettings serialPortSettings = new SerialPortSettings();
             serialPortSettings.Show();
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            GlobalsSettings _settings = new GlobalsSettings();
+
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+
+            {
+                string filePath = dialog.FileName;
+
+                XDocument config = XDocument.Load(filePath);
+
+                // Verificar si hay un namespace (xmlns)
+                XNamespace ns = config.Root?.GetDefaultNamespace() ?? XNamespace.None;
+
+                // Buscar el nodo <appSettings>
+                XElement appSettings = config.Descendants(ns + "appSettings").FirstOrDefault();
+
+                if (appSettings != null) {
+                    // Buscar la clave "BaudRate"
+
+                    foreach (XElement val in appSettings.Elements(ns + "add")) {
+
+                        _settings.SaveConfig(val.FirstAttribute.Value,val.LastAttribute.Value);
+
+                    }
+
+                    /*
+                    XElement value = appSettings.Elements(ns + "add")
+                        .FirstOrDefault(e => (string)e.Attribute("key") == configname);
+
+                    */
+
+                }
+
+            }
+        }
+
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                string filePath = "RS232 Communicator.dll.config";
+                string fileContent = File.ReadAllText(filePath);
+                
+
+                saveFileDialog.Filter = "Archivos Config (*.config)|*.config|Todos los archivos (*.*)|*.*";
+                saveFileDialog.Title = "Guardar como";
+                saveFileDialog.DefaultExt = "config";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(saveFileDialog.FileName, fileContent);
+                    MessageBox.Show("Configurations Saved Successfuly!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
         }
     }
 }

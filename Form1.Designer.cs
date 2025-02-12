@@ -129,13 +129,15 @@
             // 
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             loadToolStripMenuItem.Size = new Size(224, 26);
-            loadToolStripMenuItem.Text = "Load";
+            loadToolStripMenuItem.Text = "Import";
+            loadToolStripMenuItem.Click += loadToolStripMenuItem_Click;
             // 
             // exportToolStripMenuItem
             // 
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             exportToolStripMenuItem.Size = new Size(224, 26);
-            exportToolStripMenuItem.Text = "Save";
+            exportToolStripMenuItem.Text = "Export";
+            exportToolStripMenuItem.Click += exportToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 

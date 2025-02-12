@@ -40,17 +40,17 @@
             rb600baundrate = new RadioButton();
             rb300baundrate = new RadioButton();
             rb110baundrate = new RadioButton();
-            groupBox1 = new GroupBox();
+            gbDataBits = new GroupBox();
             rb8databits = new RadioButton();
             rb7databits = new RadioButton();
-            groupBox2 = new GroupBox();
+            gbStopBits = new GroupBox();
             rb2stopbits = new RadioButton();
             rb1stopbits = new RadioButton();
-            groupBox3 = new GroupBox();
+            gbParity = new GroupBox();
             rbEvenParity = new RadioButton();
             rbOddParity = new RadioButton();
             rbNoneParity = new RadioButton();
-            groupBox4 = new GroupBox();
+            gbFlowControl = new GroupBox();
             rbXonXoffFlowControl = new RadioButton();
             rbXonRTSFlowControl = new RadioButton();
             rbRTSFlowControl = new RadioButton();
@@ -59,10 +59,10 @@
             btnSaveSettings = new Button();
             btnCloseSettings = new Button();
             gbBundRate.SuspendLayout();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
+            gbDataBits.SuspendLayout();
+            gbStopBits.SuspendLayout();
+            gbParity.SuspendLayout();
+            gbFlowControl.SuspendLayout();
             SuspendLayout();
             // 
             // gbBundRate
@@ -198,17 +198,17 @@
             rb110baundrate.Text = "110";
             rb110baundrate.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbDataBits
             // 
-            groupBox1.BackColor = SystemColors.ButtonFace;
-            groupBox1.Controls.Add(rb8databits);
-            groupBox1.Controls.Add(rb7databits);
-            groupBox1.Location = new Point(17, 153);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(120, 70);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Data Bits";
+            gbDataBits.BackColor = SystemColors.ButtonFace;
+            gbDataBits.Controls.Add(rb8databits);
+            gbDataBits.Controls.Add(rb7databits);
+            gbDataBits.Location = new Point(17, 153);
+            gbDataBits.Name = "gbDataBits";
+            gbDataBits.Size = new Size(120, 70);
+            gbDataBits.TabIndex = 1;
+            gbDataBits.TabStop = false;
+            gbDataBits.Text = "Data Bits";
             // 
             // rb8databits
             // 
@@ -232,17 +232,17 @@
             rb7databits.Text = "7";
             rb7databits.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // gbStopBits
             // 
-            groupBox2.BackColor = SystemColors.ButtonFace;
-            groupBox2.Controls.Add(rb2stopbits);
-            groupBox2.Controls.Add(rb1stopbits);
-            groupBox2.Location = new Point(151, 153);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(120, 70);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Stop Bits";
+            gbStopBits.BackColor = SystemColors.ButtonFace;
+            gbStopBits.Controls.Add(rb2stopbits);
+            gbStopBits.Controls.Add(rb1stopbits);
+            gbStopBits.Location = new Point(151, 153);
+            gbStopBits.Name = "gbStopBits";
+            gbStopBits.Size = new Size(120, 70);
+            gbStopBits.TabIndex = 2;
+            gbStopBits.TabStop = false;
+            gbStopBits.Text = "Stop Bits";
             // 
             // rb2stopbits
             // 
@@ -266,18 +266,18 @@
             rb1stopbits.Text = "1";
             rb1stopbits.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // gbParity
             // 
-            groupBox3.BackColor = SystemColors.ButtonFace;
-            groupBox3.Controls.Add(rbEvenParity);
-            groupBox3.Controls.Add(rbOddParity);
-            groupBox3.Controls.Add(rbNoneParity);
-            groupBox3.Location = new Point(17, 246);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(120, 157);
-            groupBox3.TabIndex = 3;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Parity";
+            gbParity.BackColor = SystemColors.ButtonFace;
+            gbParity.Controls.Add(rbEvenParity);
+            gbParity.Controls.Add(rbOddParity);
+            gbParity.Controls.Add(rbNoneParity);
+            gbParity.Location = new Point(17, 246);
+            gbParity.Name = "gbParity";
+            gbParity.Size = new Size(120, 157);
+            gbParity.TabIndex = 3;
+            gbParity.TabStop = false;
+            gbParity.Text = "Parity";
             // 
             // rbEvenParity
             // 
@@ -311,28 +311,28 @@
             rbNoneParity.Text = "None";
             rbNoneParity.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // gbFlowControl
             // 
-            groupBox4.BackColor = SystemColors.ButtonFace;
-            groupBox4.Controls.Add(rbXonXoffFlowControl);
-            groupBox4.Controls.Add(rbXonRTSFlowControl);
-            groupBox4.Controls.Add(rbRTSFlowControl);
-            groupBox4.Controls.Add(rbNoneFlowControl);
-            groupBox4.Location = new Point(151, 246);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(120, 157);
-            groupBox4.TabIndex = 4;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Flow Control";
+            gbFlowControl.BackColor = SystemColors.ButtonFace;
+            gbFlowControl.Controls.Add(rbXonXoffFlowControl);
+            gbFlowControl.Controls.Add(rbXonRTSFlowControl);
+            gbFlowControl.Controls.Add(rbRTSFlowControl);
+            gbFlowControl.Controls.Add(rbNoneFlowControl);
+            gbFlowControl.Location = new Point(151, 246);
+            gbFlowControl.Name = "gbFlowControl";
+            gbFlowControl.Size = new Size(120, 157);
+            gbFlowControl.TabIndex = 4;
+            gbFlowControl.TabStop = false;
+            gbFlowControl.Text = "Flow Control";
             // 
             // rbXonXoffFlowControl
             // 
             rbXonXoffFlowControl.AutoSize = true;
             rbXonXoffFlowControl.Location = new Point(17, 56);
             rbXonXoffFlowControl.Name = "rbXonXoffFlowControl";
-            rbXonXoffFlowControl.Size = new Size(98, 24);
+            rbXonXoffFlowControl.Size = new Size(90, 24);
             rbXonXoffFlowControl.TabIndex = 1;
-            rbXonXoffFlowControl.Text = "Xon / Xoff";
+            rbXonXoffFlowControl.Text = "Xon/Xoff";
             rbXonXoffFlowControl.UseVisualStyleBackColor = true;
             // 
             // rbXonRTSFlowControl
@@ -340,9 +340,9 @@
             rbXonRTSFlowControl.AutoSize = true;
             rbXonRTSFlowControl.Location = new Point(17, 116);
             rbXonRTSFlowControl.Name = "rbXonRTSFlowControl";
-            rbXonRTSFlowControl.Size = new Size(94, 24);
+            rbXonRTSFlowControl.Size = new Size(86, 24);
             rbXonRTSFlowControl.TabIndex = 3;
-            rbXonRTSFlowControl.Text = "Xon / RTS";
+            rbXonRTSFlowControl.Text = "Xon/RTS";
             rbXonRTSFlowControl.UseVisualStyleBackColor = true;
             // 
             // rbRTSFlowControl
@@ -384,6 +384,7 @@
             btnSaveSettings.TabIndex = 6;
             btnSaveSettings.Text = "Save";
             btnSaveSettings.UseVisualStyleBackColor = true;
+            btnSaveSettings.Click += btnSaveSettings_Click;
             // 
             // btnCloseSettings
             // 
@@ -404,10 +405,10 @@
             Controls.Add(btnCloseSettings);
             Controls.Add(btnSaveSettings);
             Controls.Add(lsCOMPortSelect);
-            Controls.Add(groupBox4);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            Controls.Add(gbFlowControl);
+            Controls.Add(gbParity);
+            Controls.Add(gbStopBits);
+            Controls.Add(gbDataBits);
             Controls.Add(gbBundRate);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             MaximumSize = new Size(502, 531);
@@ -416,26 +417,26 @@
             Text = "Serial Port Settings";
             gbBundRate.ResumeLayout(false);
             gbBundRate.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
+            gbDataBits.ResumeLayout(false);
+            gbDataBits.PerformLayout();
+            gbStopBits.ResumeLayout(false);
+            gbStopBits.PerformLayout();
+            gbParity.ResumeLayout(false);
+            gbParity.PerformLayout();
+            gbFlowControl.ResumeLayout(false);
+            gbFlowControl.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private GroupBox gbBundRate;
-        private GroupBox groupBox1;
+        private GroupBox gbDataBits;
         private RadioButton rb300baundrate;
         private RadioButton rb110baundrate;
         private RadioButton rb8databits;
         private RadioButton rb7databits;
-        private GroupBox groupBox2;
+        private GroupBox gbStopBits;
         private RadioButton rb2stopbits;
         private RadioButton rb1stopbits;
         private RadioButton rb1200baundrate;
@@ -447,11 +448,11 @@
         private RadioButton rb9600baundrate;
         private RadioButton rb4800baundrate;
         private RadioButton rb2400baundrate;
-        private GroupBox groupBox3;
+        private GroupBox gbParity;
         private RadioButton rbEvenParity;
         private RadioButton rbOddParity;
         private RadioButton rbNoneParity;
-        private GroupBox groupBox4;
+        private GroupBox gbFlowControl;
         private RadioButton rbXonXoffFlowControl;
         private RadioButton rbXonRTSFlowControl;
         private RadioButton rbRTSFlowControl;

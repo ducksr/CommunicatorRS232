@@ -1,11 +1,14 @@
 
 using RS232_Communicator.Utilities;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Drawing;
 using System.IO.Ports;
 using System.Net.Http;
 using System.Reflection.Emit;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace RS232_Communicator
@@ -14,6 +17,8 @@ namespace RS232_Communicator
     {
 
         private SerialPort? serialPort;
+        private bool activeLoadFile = false;
+
 
         // Handles UI thread exceptions
         private static void GlobalThreadExceptionHandler(object sender, ThreadExceptionEventArgs e)
@@ -73,8 +78,15 @@ namespace RS232_Communicator
 
         private void tsslblRun_Click(object sender, EventArgs e)
         {
+            if (activeLoadFile)
+            {
+                MessageBox.Show("There is an active upload!");
+            }
+
 
             GlobalsSettings _settings = new GlobalsSettings();
+
+            txtWritter.Enabled = false;
 
             try
             {
@@ -105,7 +117,8 @@ namespace RS232_Communicator
                         break;
                 }
 
-                switch (_settings.FlowControl) { 
+                switch (_settings.FlowControl)
+                {
                     case "None":
                         handshake = Handshake.None;
                         break;
@@ -121,23 +134,44 @@ namespace RS232_Communicator
                 }
 
                 // Configurar puerto
-                serialPort = new SerialPort {
+                serialPort = new SerialPort
+                {
                     PortName = "COM" + _settings.SerialPort
-                    ,BaudRate = int.Parse(_settings.BaundRate)
-                    ,Parity = parity
-                    ,DataBits = int.Parse(_settings.DataBits)
-                    ,StopBits = stopBits
+                    ,
+                    BaudRate = int.Parse(_settings.BaundRate)
+                    ,
+                    Parity = parity
+                    ,
+                    DataBits = int.Parse(_settings.DataBits)
+                    ,
+                    StopBits = stopBits
                     //,Handshake = handshake
                 };
 
                 serialPort.Open();
 
+                int i = 1;
+                int totalLines = txtWritter.Lines.Length;
+
+                MessageBox.Show(totalLines.ToString());
+
+                pbLoadProcess.Visible = true;
+
                 foreach (string linea in txtWritter.Lines)
                 {
                     serialPort.WriteLine(linea);
+
+                    pbLoadProcess.Value = i / totalLines;
+
+                    i++;
                 }
 
                 serialPort.Close();
+
+                pbLoadProcess.Visible = false;
+                MessageBox.Show("Upload Done!!");
+                txtWritter.Enabled = true;
+                activeLoadFile = false;
 
             }
             catch (Exception ex)
@@ -202,10 +236,14 @@ namespace RS232_Communicator
                 serialPort = new SerialPort
                 {
                     PortName = "COM" + _settings.SerialPort
-                    ,BaudRate = int.Parse(_settings.BaundRate)
-                    ,Parity = parity
-                    ,DataBits = int.Parse(_settings.DataBits)
-                    ,StopBits = stopBits
+                    ,
+                    BaudRate = int.Parse(_settings.BaundRate)
+                    ,
+                    Parity = parity
+                    ,
+                    DataBits = int.Parse(_settings.DataBits)
+                    ,
+                    StopBits = stopBits
                     //,Handshake = handshake
                 };
 
@@ -252,7 +290,6 @@ namespace RS232_Communicator
         {
             SerialPortSettings serialPortSettings = new SerialPortSettings();
             serialPortSettings.StartPosition = FormStartPosition.CenterParent;
-            serialPortSettings.FormBorderStyle = FormBorderStyle.None;
             serialPortSettings.ShowDialog();
         }
 
@@ -277,12 +314,15 @@ namespace RS232_Communicator
                 // Buscar el nodo <appSettings>
                 XElement? appSettings = config.Descendants(ns + "appSettings").FirstOrDefault();
 
-                if (appSettings != null) {
+                if (appSettings != null)
+                {
                     // Buscar la clave "BaudRate"
 
-                    foreach (XElement? val in appSettings.Elements(ns + "add")) {
+                    foreach (XElement? val in appSettings.Elements(ns + "add"))
+                    {
 
-                        if (val != null){
+                        if (val != null)
+                        {
                             _settings.SaveConfig(val.FirstAttribute.Value, val.LastAttribute.Value);
                         }
                     }
@@ -294,12 +334,12 @@ namespace RS232_Communicator
 
         private void exportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
                 string filePath = "RS232 Communicator.dll.config";
                 string fileContent = File.ReadAllText(filePath);
-                
+
 
                 saveFileDialog.Filter = "Archivos Config (*.config)|*.config|Todos los archivos (*.*)|*.*";
                 saveFileDialog.Title = "Guardar como";
@@ -312,6 +352,12 @@ namespace RS232_Communicator
                 }
             }
 
+        }
+
+        private void txtWritter_TextChanged(object sender, EventArgs e)
+        {
+            tsstotalLines.Text = txtWritter.Lines.Length.ToString();
+            tsstotalChars.Text = txtWritter.Text.Length.ToString();
         }
     }
 }

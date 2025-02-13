@@ -51,6 +51,11 @@
             toolStripStatusLabel3 = new ToolStripStatusLabel();
             tsslblStatusTitle = new ToolStripStatusLabel();
             tsslblStatusConnection = new ToolStripStatusLabel();
+            pbLoadProcess = new ProgressBar();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            tsstotalLines = new ToolStripStatusLabel();
+            toolStripStatusLabel2 = new ToolStripStatusLabel();
+            tsstotalChars = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -59,10 +64,12 @@
             // 
             txtWritter.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtWritter.Location = new Point(12, 41);
+            txtWritter.MaxLength = int.MaxValue;
             txtWritter.Multiline = true;
             txtWritter.Name = "txtWritter";
             txtWritter.Size = new Size(747, 502);
             txtWritter.TabIndex = 1;
+            txtWritter.TextChanged += txtWritter_TextChanged;
             // 
             // menuStrip1
             // 
@@ -121,21 +128,21 @@
             // openToolStripMenuItem1
             // 
             openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            openToolStripMenuItem1.Size = new Size(224, 26);
+            openToolStripMenuItem1.Size = new Size(137, 26);
             openToolStripMenuItem1.Text = "Edit";
             openToolStripMenuItem1.Click += openToolStripMenuItem1_Click;
             // 
             // loadToolStripMenuItem
             // 
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            loadToolStripMenuItem.Size = new Size(224, 26);
+            loadToolStripMenuItem.Size = new Size(137, 26);
             loadToolStripMenuItem.Text = "Import";
             loadToolStripMenuItem.Click += loadToolStripMenuItem_Click;
             // 
             // exportToolStripMenuItem
             // 
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(224, 26);
+            exportToolStripMenuItem.Size = new Size(137, 26);
             exportToolStripMenuItem.Text = "Export";
             exportToolStripMenuItem.Click += exportToolStripMenuItem_Click;
             // 
@@ -181,7 +188,7 @@
             // statusStrip1
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { tsslblVersion, tsslblVersionNumber, toolStripStatusLabel3, tsslblStatusTitle, tsslblStatusConnection });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { tsslblVersion, tsslblVersionNumber, toolStripStatusLabel3, tsslblStatusTitle, tsslblStatusConnection, toolStripStatusLabel1, tsstotalLines, toolStripStatusLabel2, tsstotalChars });
             statusStrip1.Location = new Point(0, 559);
             statusStrip1.Margin = new Padding(0, 0, 20, 0);
             statusStrip1.Name = "statusStrip1";
@@ -225,12 +232,45 @@
             tsslblStatusConnection.Size = new Size(80, 20);
             tsslblStatusConnection.Text = "....Wating....";
             // 
+            // pbLoadProcess
+            // 
+            pbLoadProcess.Location = new Point(113, 215);
+            pbLoadProcess.Name = "pbLoadProcess";
+            pbLoadProcess.Size = new Size(559, 39);
+            pbLoadProcess.TabIndex = 4;
+            pbLoadProcess.Visible = false;
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(45, 20);
+            toolStripStatusLabel1.Text = "Lines:";
+            // 
+            // tsstotalLines
+            // 
+            tsstotalLines.Name = "tsstotalLines";
+            tsstotalLines.Size = new Size(17, 20);
+            tsstotalLines.Text = "0";
+            // 
+            // toolStripStatusLabel2
+            // 
+            toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            toolStripStatusLabel2.Size = new Size(48, 20);
+            toolStripStatusLabel2.Text = "Chars:";
+            // 
+            // tsstotalChars
+            // 
+            tsstotalChars.Name = "tsstotalChars";
+            tsstotalChars.Size = new Size(17, 20);
+            tsstotalChars.Text = "0";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(771, 585);
+            Controls.Add(pbLoadProcess);
             Controls.Add(statusStrip1);
             Controls.Add(txtWritter);
             Controls.Add(menuStrip1);
@@ -268,5 +308,10 @@
         private ToolStripStatusLabel tsslblStatusConnection;
         private ToolStripMenuItem msbtnRun;
         private ToolStripMenuItem toolStripMenuItem1;
+        private ProgressBar pbLoadProcess;
+        private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel tsstotalLines;
+        private ToolStripStatusLabel toolStripStatusLabel2;
+        private ToolStripStatusLabel tsstotalChars;
     }
 }

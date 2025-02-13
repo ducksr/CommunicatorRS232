@@ -401,7 +401,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(484, 484);
+            ClientSize = new Size(477, 483);
             Controls.Add(btnCloseSettings);
             Controls.Add(btnSaveSettings);
             Controls.Add(lsCOMPortSelect);
@@ -410,19 +410,10 @@
             Controls.Add(gbStopBits);
             Controls.Add(gbDataBits);
             Controls.Add(gbBundRate);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             MaximumSize = new Size(502, 531);
-            MinimumSize = new Size(502, 531);
             Name = "SerialPortSettings";
             Text = "Serial Port Settings";
-            Controls.SetChildIndex(gbBundRate, 0);
-            Controls.SetChildIndex(gbDataBits, 0);
-            Controls.SetChildIndex(gbStopBits, 0);
-            Controls.SetChildIndex(gbParity, 0);
-            Controls.SetChildIndex(gbFlowControl, 0);
-            Controls.SetChildIndex(lsCOMPortSelect, 0);
-            Controls.SetChildIndex(btnSaveSettings, 0);
-            Controls.SetChildIndex(btnCloseSettings, 0);
             gbBundRate.ResumeLayout(false);
             gbBundRate.PerformLayout();
             gbDataBits.ResumeLayout(false);
@@ -434,7 +425,6 @@
             gbFlowControl.ResumeLayout(false);
             gbFlowControl.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

@@ -251,7 +251,9 @@ namespace RS232_Communicator
         private void openToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             SerialPortSettings serialPortSettings = new SerialPortSettings();
-            serialPortSettings.Show();
+            serialPortSettings.StartPosition = FormStartPosition.CenterParent;
+            serialPortSettings.FormBorderStyle = FormBorderStyle.None;
+            serialPortSettings.ShowDialog();
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)

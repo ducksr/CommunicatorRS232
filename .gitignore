@@ -38,3 +38,53 @@ obj/Debug/net8.0-windows/RS232_Communicator.SerialPortSettings.resources
 .vs/RS232 Communicator/FileContentIndex/5a1bc98f-8c93-42b1-ad06-0020dc71840f.vsidx
 .vs/RS232 Communicator/FileContentIndex/d3bb4f46-3ad1-4cab-b79a-2d540b2322a7.vsidx
 .vs/RS232 Communicator/FileContentIndex/06e977e6-354a-449f-9dfd-c85a84a4ae6c.vsidx
+.vs/RS232 Communicator/FileContentIndex/7a9a8c58-7650-4c36-a2e1-0ac6640d3371.vsidx
+bin/Release/net8.0-windows/RS232 Communicator.deps.json
+bin/Release/net8.0-windows/RS232 Communicator.dll
+bin/Release/net8.0-windows/RS232 Communicator.dll.config
+bin/Release/net8.0-windows/RS232 Communicator.exe
+bin/Release/net8.0-windows/RS232 Communicator.pdb
+bin/Release/net8.0-windows/RS232 Communicator.runtimeconfig.json
+bin/Release/net8.0-windows/System.IO.Ports.dll
+bin/Release/net8.0-windows/runtimes/android-arm/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/android-arm64/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/android-x64/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/android-x86/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/linux-arm/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/linux-bionic-arm64/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/linux-bionic-x64/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/linux-musl-arm/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/linux-musl-arm64/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/linux-musl-x64/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/linux-x64/native/libSystem.IO.Ports.Native.so
+bin/Release/net8.0-windows/runtimes/maccatalyst-arm64/native/libSystem.IO.Ports.Native.dylib
+bin/Release/net8.0-windows/runtimes/maccatalyst-x64/native/libSystem.IO.Ports.Native.dylib
+bin/Release/net8.0-windows/runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib
+bin/Release/net8.0-windows/runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib
+bin/Release/net8.0-windows/runtimes/unix/lib/net8.0/System.IO.Ports.dll
+bin/Release/net8.0-windows/runtimes/win/lib/net8.0/System.IO.Ports.dll
+obj/Release/net8.0-windows/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+obj/Release/net8.0-windows/apphost.exe
+obj/Release/net8.0-windows/RS232 Co.355C1D4E.Up2Date
+obj/Release/net8.0-windows/RS232 Communicator.AssemblyInfo.cs
+obj/Release/net8.0-windows/RS232 Communicator.AssemblyInfoInputs.cache
+obj/Release/net8.0-windows/RS232 Communicator.assets.cache
+obj/Release/net8.0-windows/RS232 Communicator.csproj.AssemblyReference.cache
+obj/Release/net8.0-windows/RS232 Communicator.csproj.CoreCompileInputs.cache
+obj/Release/net8.0-windows/RS232 Communicator.csproj.FileListAbsolute.txt
+obj/Release/net8.0-windows/RS232 Communicator.csproj.GenerateResource.cache
+obj/Release/net8.0-windows/RS232 Communicator.designer.deps.json
+obj/Release/net8.0-windows/RS232 Communicator.designer.runtimeconfig.json
+obj/Release/net8.0-windows/RS232 Communicator.dll
+obj/Release/net8.0-windows/RS232 Communicator.GeneratedMSBuildEditorConfig.editorconfig
+obj/Release/net8.0-windows/RS232 Communicator.genruntimeconfig.cache
+obj/Release/net8.0-windows/RS232 Communicator.GlobalUsings.g.cs
+obj/Release/net8.0-windows/RS232 Communicator.pdb
+obj/Release/net8.0-windows/RS232 Communicator.sourcelink.json
+obj/Release/net8.0-windows/RS232_Communicator.Form1.resources
+obj/Release/net8.0-windows/RS232_Communicator.Properties.Resources.resources
+obj/Release/net8.0-windows/RS232_Communicator.SerialPortSettings.resources
+obj/Release/net8.0-windows/ref/RS232 Communicator.dll
+obj/Release/net8.0-windows/refint/RS232 Communicator.dll
+obj/Release/net8.0-windows/TempPE/Properties.Resources.Designer.cs.dll

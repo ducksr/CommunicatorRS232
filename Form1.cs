@@ -120,9 +120,6 @@ namespace RS232_Communicator
                         break;
                 }
 
-
-
-
                 // Configurar puerto
                 serialPort = new SerialPort {
                     PortName = "COM" + _settings.SerialPort
@@ -130,7 +127,7 @@ namespace RS232_Communicator
                     ,Parity = parity
                     ,DataBits = int.Parse(_settings.DataBits)
                     ,StopBits = stopBits
-                    ,Handshake = handshake
+                    //,Handshake = handshake
                 };
 
                 serialPort.Open();
@@ -205,16 +202,11 @@ namespace RS232_Communicator
                 serialPort = new SerialPort
                 {
                     PortName = "COM" + _settings.SerialPort
-                    ,
-                    BaudRate = int.Parse(_settings.BaundRate)
-                    ,
-                    Parity = parity
-                    ,
-                    DataBits = int.Parse(_settings.DataBits)
-                    ,
-                    StopBits = stopBits
-                    ,
-                    Handshake = handshake
+                    ,BaudRate = int.Parse(_settings.BaundRate)
+                    ,Parity = parity
+                    ,DataBits = int.Parse(_settings.DataBits)
+                    ,StopBits = stopBits
+                    //,Handshake = handshake
                 };
 
                 serialPort.Open();
@@ -222,6 +214,7 @@ namespace RS232_Communicator
                 serialPort.Close();
 
                 tsslblStatusConnection.Enabled = true;
+                tsslblStatusConnection.Text = "Test Success !!!";
 
 
             }
@@ -291,12 +284,6 @@ namespace RS232_Communicator
                             _settings.SaveConfig(val.FirstAttribute.Value, val.LastAttribute.Value);
                         }
                     }
-
-                    /*
-                    XElement value = appSettings.Elements(ns + "add")
-                        .FirstOrDefault(e => (string)e.Attribute("key") == configname);
-
-                    */
 
                 }
 

@@ -113,68 +113,74 @@ namespace RS232_Communicator
 
         private void btnSaveSettings_Click(object sender, EventArgs e)
         {
-
-            GlobalsSettings _settings = new GlobalsSettings();
-
-            // Set Baund Rate
-            foreach (RadioButton activeRB in gbBundRate.Controls) {
-                if (activeRB.Checked) {
-                    _settings.SaveConfig("BaundRate", activeRB.Text);
-                }
-            }
-
-            // Set Data Bits
-            foreach (RadioButton activeRB in gbDataBits.Controls)
+            try
             {
-                if (activeRB.Checked)
+
+                GlobalsSettings _settings = new GlobalsSettings();
+
+                // Set Baund Rate
+                foreach (RadioButton activeRB in gbBundRate.Controls)
                 {
-                    _settings.SaveConfig("DataBits", activeRB.Text);
+                    if (activeRB.Checked)
+                    {
+                        _settings.SaveConfig("BaundRate", activeRB.Text);
+                    }
                 }
-            }
 
-            // Set Stop Bits
-            foreach (RadioButton activeRB in gbStopBits.Controls)
-            {
-                if (activeRB.Checked)
+                // Set Data Bits
+                foreach (RadioButton activeRB in gbDataBits.Controls)
                 {
-                    _settings.SaveConfig("StopBits", activeRB.Text);
+                    if (activeRB.Checked)
+                    {
+                        _settings.SaveConfig("DataBits", activeRB.Text);
+                    }
                 }
-            }
 
-            // Set Parity
-            foreach (RadioButton activeRB in gbParity.Controls)
-            {
-                if (activeRB.Checked)
+                // Set Stop Bits
+                foreach (RadioButton activeRB in gbStopBits.Controls)
                 {
-                    _settings.SaveConfig("Parity", activeRB.Text);
+                    if (activeRB.Checked)
+                    {
+                        _settings.SaveConfig("StopBits", activeRB.Text);
+                    }
                 }
-            }
 
-            // Set Parity
-            foreach (RadioButton activeRB in gbParity.Controls)
-            {
-                if (activeRB.Checked)
+                // Set Parity
+                foreach (RadioButton activeRB in gbParity.Controls)
                 {
-                    _settings.SaveConfig("Parity", activeRB.Text);
+                    if (activeRB.Checked)
+                    {
+                        _settings.SaveConfig("Parity", activeRB.Text);
+                    }
                 }
-            }
 
-            // Set Flow Control
-            foreach (RadioButton activeRB in gbFlowControl.Controls)
-            {
-                if (activeRB.Checked)
+                // Set Parity
+                foreach (RadioButton activeRB in gbParity.Controls)
                 {
-                    _settings.SaveConfig("FlowControl", activeRB.Text);
+                    if (activeRB.Checked)
+                    {
+                        _settings.SaveConfig("Parity", activeRB.Text);
+                    }
                 }
+
+                // Set Flow Control
+                foreach (RadioButton activeRB in gbFlowControl.Controls)
+                {
+                    if (activeRB.Checked)
+                    {
+                        _settings.SaveConfig("FlowControl", activeRB.Text);
+                    }
+                }
+
+                // Save Serial Port
+                _settings.SaveConfig("SerialPort", lsCOMPortSelect.SelectedItem.ToString().Remove(0, 3));
+
+
+                MessageBox.Show("Saved !!");
             }
-
-            // Save Serial Port
-            _settings.SaveConfig("SerialPort",lsCOMPortSelect.SelectedItem.ToString().Remove(0,3));
-
-
-            
-            
-
+            catch (Exception? ex) {
+                MessageBox.Show("Faile - Error Message: " + ex.Message);
+            }
         }
     }
 }

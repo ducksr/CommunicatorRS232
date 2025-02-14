@@ -1,4 +1,4 @@
-
+﻿
 using RS232_Communicator.Utilities;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -41,6 +41,7 @@ namespace RS232_Communicator
         public Form1()
         {
             InitializeComponent();
+
 
             Application.ThreadException += new ThreadExceptionEventHandler(GlobalThreadExceptionHandler);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(GlobalUnhandledExceptionHandler);
@@ -281,7 +282,7 @@ namespace RS232_Communicator
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     File.WriteAllText(saveFileDialog.FileName, texto);
-                    MessageBox.Show("Archivo guardado correctamente.", "�xito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Archivo guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

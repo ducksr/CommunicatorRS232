@@ -51,11 +51,11 @@
             toolStripStatusLabel3 = new ToolStripStatusLabel();
             tsslblStatusTitle = new ToolStripStatusLabel();
             tsslblStatusConnection = new ToolStripStatusLabel();
-            pbLoadProcess = new ProgressBar();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             tsstotalLines = new ToolStripStatusLabel();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
             tsstotalChars = new ToolStripStatusLabel();
+            pbLoadProcess = new ProgressBar();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -232,14 +232,6 @@
             tsslblStatusConnection.Size = new Size(80, 20);
             tsslblStatusConnection.Text = "....Wating....";
             // 
-            // pbLoadProcess
-            // 
-            pbLoadProcess.Location = new Point(113, 215);
-            pbLoadProcess.Name = "pbLoadProcess";
-            pbLoadProcess.Size = new Size(559, 39);
-            pbLoadProcess.TabIndex = 4;
-            pbLoadProcess.Visible = false;
-            // 
             // toolStripStatusLabel1
             // 
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
@@ -264,6 +256,14 @@
             tsstotalChars.Size = new Size(17, 20);
             tsstotalChars.Text = "0";
             // 
+            // pbLoadProcess
+            // 
+            pbLoadProcess.Location = new Point(117, 247);
+            pbLoadProcess.Name = "pbLoadProcess";
+            pbLoadProcess.Size = new Size(559, 39);
+            pbLoadProcess.TabIndex = 4;
+            pbLoadProcess.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -274,6 +274,7 @@
             Controls.Add(statusStrip1);
             Controls.Add(txtWritter);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MinimumSize = new Size(789, 632);
             Name = "Form1";

@@ -104,6 +104,7 @@ namespace RS232_Communicator
 
             // Set Serial Port
             lsCOMPortSelect.SelectedIndex = int.Parse(_settings.SerialPort);
+
         }
 
         private void btnCloseSettings_Click(object sender, EventArgs e)
@@ -182,5 +183,6 @@ namespace RS232_Communicator
                 MessageBox.Show("Faile - Error Message: " + ex.Message);
             }
         }
+
     }
 }

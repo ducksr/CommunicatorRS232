@@ -7,10 +7,17 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>connectorrs232_nem_icon.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Company></Company>
+    <Authors></Authors>
+    <PackageIcon></PackageIcon>
+    <Title></Title>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="App icon.bmp" />
+    <Content Include="connectorrs232_nem_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
